@@ -1,0 +1,241 @@
+/*@font-face {*/
+/*    font-family: Ubuntu-r;*/
+/*    src: url(./Ubuntu-Regular.ttf);*/
+/*}*/
+:root {
+  --color1: #F0EAD6;
+  --color2: #F5F5DC;
+  --color3: #D2B48C;
+  --color4: #87A96B;
+}
+/* Réinitialisation des styles par défaut */
+* {
+  font-family: Ubuntu-r;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color3);
+}
+section {
+  margin: 100px 0;
+  position: relative;
+}
+section::after {
+  content: "";
+  position: absolute;
+  background: var(--color1);
+  height: 1px;
+  width: 80%;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: h1anim 6s ease-in-out forwards;
+  transform-origin: center;
+}
+@keyframes h1anim {
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+header {
+  display: grid;
+  grid-template-rows: 13% 87%;
+  height: 100vh;
+}
+h1 {
+  margin: 0 0 0 30px;
+}
+nav {
+  background-color: var(--color4);
+  display: grid;
+  grid-template-columns: 15% 85%;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  height: 13vh;
+  transition: 0.2s ease;
+  width: 100%;
+  color: var(--color1);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color2);
+}
+
+.nav-img {
+  background: url(./img/navi.jpg) top/cover;;
+  height: 100vh;
+}
+#accueil {
+  color: var(--color2);
+}
+.anim1::after {
+  content: "";
+  position: absolute;
+  background: var(--color1);
+  height: 1px;
+  width: 80%;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  animation: h1anim 6s ease-in-out forwards;
+}
+.accueil h2 {
+  text-align: center;
+  margin: 40px auto;
+  padding: 0 10%;
+  font-size: 2rem;
+}
+.first {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.first p {
+  /*height: 100vh;*/
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  line-height: 2;
+}
+#img {
+  background: url(./img/planches.jpg) top/cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: 1s ease-in;
+}
+#menu-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  color: var(--color2);
+}
+#menu-section::after {
+  content: "";
+  position: absolute;
+  background: var(--color1);
+  height: 1px;
+  width: 80%;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+}
+.anim2::after {
+  animation: h1anim 6s ease-in-out forwards;
+}
+#menu {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+.menu-texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /*justify-content: space-around;*/
+}
+h2 {
+  font-size: 2rem;
+  margin: 20px auto;
+  color: var(--color4);
+}
+p {
+  /*height: 100vh;*/
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+#boisson {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  color: var(--color2);
+}
+#boisson::after {
+  content: "";
+  position: absolute;
+  background: var(--color1);
+  height: 1px;
+  width: 80%;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+}
+.anim3::after {
+  animation: h1anim 6s ease-in-out forwards;
+}
+
+#drinks {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  height: 50vh;
+  color: var(--color2);
+}
+#contact h2 {
+  margin-bottom: 50px;
+}
+#contact div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  color: var(--color2);
+  width: 100%;
+  height: 100%;
+}
+a:visited {
+  color: var(--color2);
+}
