@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 .nav-img {
-  background: url(./img/navi.jpg) top/cover;;
+  background: url(./navi.jpg) top/cover;;
   height: 100vh;
 }
 #accueil {
@@ -121,7 +121,7 @@ nav ul li a {
   line-height: 2;
 }
 #img {
-  background: url(./img/planches.jpg) top/cover;
+  background: url(./planches.jpg) top/cover;
   height: 100%;
   width: 100%;
   opacity: 0;
