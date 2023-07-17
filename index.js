@@ -38,28 +38,28 @@ function defilerImages() {
   var indexMenu = 0;
   var indexDrinks = 0;
   var menuImages = [
-    "./img/img1.jpg",
-    "./img/img2.jpg",
-    "./img/img3.jpg",
-    "./img/img4.jpg",
-    "./img/img5.jpg",
-    "./img/img6.jpg",
-    "./img/img7.jpg",
-    "./img/img8.jpg",
-    "./img/img9.jpg",
-    "./img/img10.jpg",
-    "./img/img11.jpg"
+    "./img1.jpg",
+    "./img2.jpg",
+    "./img3.jpg",
+    "./img4.jpg",
+    "./img5.jpg",
+    "./img6.jpg",
+    "./img7.jpg",
+    "./img8.jpg",
+    "./img9.jpg",
+    "./img10.jpg",
+    "./img11.jpg"
   ];
   var drinksImages = [
-    "./img/drink1.jpg",
-    "./img/drink2.jpg",
-    "./img/drink3.jpg",
-    "./img/drink4.jpg",
-    "./img/drink5.jpg",
-    "./img/drink6.jpg",
-    "./img/drink7.jpg",
-    "./img/drink8.jpg",
-    "./img/drink9.jpg"
+    "./drink1.jpg",
+    "./drink2.jpg",
+    "./drink3.jpg",
+    "./drink4.jpg",
+    "./drink5.jpg",
+    "./drink6.jpg",
+    "./drink7.jpg",
+    "./drink8.jpg",
+    "./drink9.jpg"
   ];
   var menuElement = document.getElementById("menu");
   var drinksElement = document.getElementById("drinks");
