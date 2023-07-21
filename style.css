@@ -1,23 +1,30 @@
-/*@font-face {*/
-/*    font-family: Ubuntu-r;*/
-/*    src: url(./Ubuntu-Regular.ttf);*/
-/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lobster&family=Merriweather&display=swap');
 :root {
   --color1: #F0EAD6;
   --color2: #F5F5DC;
   --color3: #D2B48C;
-  --color4: #87A96B;
+  --color5: #87A96B;
+  --color4: #587b3c;
 }
-/* Réinitialisation des styles par défaut */
 * {
-  font-family: Ubuntu-r;
+  font-family: 'Cinzel', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+h2,
+h3,
+h4 {
+  font-family: 'Merryweather', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--color1)
+}
+.navBar div:hover {
+  color: var(--color4);
+}
 body {
-  font-family: Arial, sans-serif;
   background: var(--color3);
 }
 section {
@@ -41,16 +48,44 @@ section::after {
         transform: translateX(-50%) scaleX(1);
     }
 }
+/*-----------------------------------------------------------------------------------------------------
+                                            HEADER
+-----------------------------------------------------------------------------------------------------*/
 header {
-  display: grid;
-  grid-template-rows: 13% 87%;
   height: 100vh;
 }
+.navBar {
+  display: flex;
+}
+.navBar div {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.navBar div a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+  transition: 0.5s;
+}
+nav div a:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+}
+.logo {
+  height: 13vh;
+}
 h1 {
+  font-family: 'Lobster', serif;
   margin: 0 0 0 30px;
 }
 nav {
-  background-color: var(--color4);
+  background-color: var(--color5);
   display: grid;
   grid-template-columns: 15% 85%;
   align-items: center;
@@ -61,23 +96,41 @@ nav {
   width: 100%;
   color: var(--color1);
 }
-nav ul {
+ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   width: 100%;
-  padding: 0 40px;
+  height: 100%;
 }
-
-nav ul li {
-  margin-left: 20px;
+/* .navBar a:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+} */
+li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--color2);
+li a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  transition: 0.5s;
+  font-family: 'Merryweather', serif;
 }
-
+li:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+}
 .nav-img {
   background: url(./navi.jpg) top/cover;;
   height: 100vh;
@@ -97,11 +150,30 @@ nav ul li a {
   transform-origin: center;
   animation: h1anim 6s ease-in-out forwards;
 }
-.accueil h2 {
+/*-----------------------------------------------------------------------------------------------------
+                                            SECTION I
+-----------------------------------------------------------------------------------------------------*/
+h2 {
   text-align: center;
-  margin: 40px auto;
+  margin: 40px auto 0;
   padding: 0 10%;
   font-size: 2rem;
+  color: var(--color4);
+  font-family: 'Merryweather', sans-serif;
+}
+h3 {
+  text-align: center;
+  margin: 60px auto;
+  padding: 0 10%;
+  font-size: 2rem;
+  color: var(--color4);
+}
+h4 {
+  text-align: center;
+  margin: 10px auto 40px;
+  padding: 0 10%;
+  font-size: 1.5rem;
+  color: var(--color4);
 }
 .first {
   display: grid;
@@ -111,23 +183,30 @@ nav ul li a {
   align-items: center;
 }
 .first p {
+  line-height: 2;
+}
+p {
   /*height: 100vh;*/
   display: flex;
   align-items: center;
   text-align: center;
   padding: 0 5%;
-  font-size: 1.2rem;
-  letter-spacing: 3px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   line-height: 2;
 }
 #img {
   background: url(./planches.jpg) top/cover;
   height: 100%;
   width: 100%;
+  height: 100vh;
   opacity: 0;
   transform: translateX(300px);
   transition: 1s ease-in;
 }
+/*-----------------------------------------------------------------------------------------------------
+                                            SECTION II
+-----------------------------------------------------------------------------------------------------*/
 #menu-section {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -160,27 +239,16 @@ nav ul li a {
   transition: opacity 0.5s ease-in-out;
 }
 .menu-texte {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   /*justify-content: space-around;*/
 }
-h2 {
-  font-size: 2rem;
-  margin: 20px auto;
-  color: var(--color4);
-}
-p {
-  /*height: 100vh;*/
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 0 5%;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  line-height: 1.5;
-}
+/*-----------------------------------------------------------------------------------------------------
+                                            SECTION III
+-----------------------------------------------------------------------------------------------------*/
 #boisson {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -206,36 +274,152 @@ p {
 .anim3::after {
   animation: h1anim 6s ease-in-out forwards;
 }
-
 #drinks {
   width: 100%;
   height: 100vh;
   object-fit: cover;
   transition: 0.5s ease-in-out;
 }
-
+/*-----------------------------------------------------------------------------------------------------
+                                            FOOTER
+-----------------------------------------------------------------------------------------------------*/
 #contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  height: 50vh;
   color: var(--color2);
+  height: 30vh;
 }
 #contact h2 {
   margin-bottom: 50px;
 }
 #contact div {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   text-align: center;
   align-items: center;
   color: var(--color2);
   width: 100%;
-  height: 100%;
+  height: 30%;
+}
+.tel {
+  font-size: 1rem
+}
+.mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  color: var(--color2);
 }
 a:visited {
   color: var(--color2);
+}
+
+/*-----------------------------------------------------------------------------------------------------
+                                            media-queries petit PC
+-----------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1279px){
+  p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+                                            media-queries Tablettes
+-----------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1023px){
+  p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+  }
+  .navBar {
+    display: flex;
+  }
+} 
+
+/*-----------------------------------------------------------------------------------------------------
+                                            media-queries Smartphones
+-----------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+
+  #accueil {
+    margin: 0 0 100px;
+  }
+  .first {
+    display: block;
+  }
+  #img {
+    display: none;
+  }
+  section {
+    margin: 0;
+  }
+  h2 {
+    margin: 0;
+    padding: 100px 0 0;
+  }
+  #menu-section {
+    display: grid;
+    grid-template-areas: 
+    "txt"
+    "img";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: none;
+    height: 180vh;
+    max-height: 180vh;
+  }
+  .menu-item {
+    grid-area: img;
+  }
+  .menu-texte {
+    grid-area: txt;
+    margin: 0 0 30px 0;
+  }
+  #boisson {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: none;
+    height: 190vh;
+    max-height: 190vh;
+  }
+  #contact {
+    height: 50vh;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  #contact div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "a" "b"
+    "c" "d";
+    
+  }
+  #contact div:nth-child(1) {
+    grid-area: a;
+  }
+  #contact div:nth-child(2) {
+    grid-area: b;
+
+  }
+  #contact div:nth-child(3) {
+    grid-area: c;
+  }
+  #contact div:nth-child(4) {
+    grid-area: d;
+  }
 }
