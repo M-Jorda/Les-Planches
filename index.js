@@ -2,7 +2,10 @@ let navbar = document.querySelector(".navBar");
 let img = document.getElementById("img");
 let lastScroll = "0";
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
+  const accueilSection = document.getElementById("accueil");
+  const menuSection = document.getElementById("menu-section");
+  const boissonSection = document.getElementById("boisson");
   // navbar effect
   if (window.scrollY < lastScroll) {
     navbar.style.height = "13vh";
@@ -12,27 +15,26 @@ window.addEventListener('scroll', () => {
     navbar.style.opacity = "0";
   }
   lastScroll = window.scrollY;
-  
-  let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-     if (scrollValue > 0.30) {
-        img.style.opacity = "1";
-        img.style.transform = "none";
-    }
-    
+
+  let scrollValue =
+    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+  if (scrollValue > 0.3) {
+    img.style.opacity = "1";
+    img.style.transform = "none";
+  }
+
   if (scrollValue > 0.45) {
-    document.getElementById('accueil').classList.add('anim1');
+    document.getElementById("accueil").classList.add("anim1");
   }
 
   if (scrollValue > 0.75) {
-    document.getElementById('menu-section').classList.add('anim2');
+    document.getElementById("menu-section").classList.add("anim2");
   }
 
-  if (scrollValue > 0.90) {
-    document.getElementById('boisson').classList.add('anim3');
+  if (scrollValue > 0.9) {
+    document.getElementById("boisson").classList.add("anim3");
   }
 });
-
-
 
 function defilerImages() {
   var indexMenu = 0;
@@ -48,7 +50,7 @@ function defilerImages() {
     "./img8.jpg",
     "./img9.jpg",
     "./img10.jpg",
-    "./img11.jpg"
+    "./img11.jpg",
   ];
   var drinksImages = [
     "./drink1.jpg",
@@ -59,7 +61,7 @@ function defilerImages() {
     "./drink6.jpg",
     "./drink7.jpg",
     "./drink8.jpg",
-    "./drink9.jpg"
+    "./drink9.jpg",
   ];
   var menuElement = document.getElementById("menu");
   var drinksElement = document.getElementById("drinks");
@@ -67,19 +69,19 @@ function defilerImages() {
   menuElement.style.transition = "opacity 0.5s";
   drinksElement.style.transition = "opacity 0.5s";
 
-  setInterval(function() {
+  setInterval(function () {
     menuElement.style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       menuElement.src = menuImages[indexMenu];
       menuElement.style.opacity = "1";
       indexMenu = (indexMenu + 1) % menuImages.length;
     }, 500);
   }, 3000);
 
-  setTimeout(function() {
-    setInterval(function() {
+  setTimeout(function () {
+    setInterval(function () {
       drinksElement.style.opacity = "0";
-      setTimeout(function() {
+      setTimeout(function () {
         drinksElement.src = drinksImages[indexDrinks];
         drinksElement.style.opacity = "1";
         indexDrinks = (indexDrinks + 1) % drinksImages.length;
@@ -88,6 +90,10 @@ function defilerImages() {
   }, 1500);
 }
 
+function openMail() {
+  var emailAddress = "contact@example.com";
+  window.open("mailto:" + emailAddress, "_blank");
+}
 
 // Appel de la fonction au chargement de la page
 window.onload = defilerImages;
